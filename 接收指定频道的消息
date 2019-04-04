@@ -1,0 +1,8 @@
+from test import Redishelp  #test表示redis发布订阅类的文件名
+
+obj = Redishelp()
+redis_sub =  obj.subscribe()  #调用接收消息函数
+
+while True:
+    msg = redis_sub.parse_response() #开始接收消息
+    print(msg)
