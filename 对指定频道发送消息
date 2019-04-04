@@ -1,0 +1,4 @@
+from test import Redishelp  #test表示redis发布订阅类的文件名
+
+obj = Redishelp()
+obj.public('hello world')   #发送消息，也可以直接在redis客户端使用命令发送消息，如：PUBLISH fm104.5（频道） "what are you doing?"（内容）
